@@ -10,7 +10,8 @@ public class InventoryCart {
 	
 	public void add(Product newproduct)	{
 		for (int j = 0; j < i; j++) {
-            if (cart[j].getName() == newproduct.getName()){
+            if (cart[j].getName() == newproduct.getName() && cart[j].getWeight() == newproduct.getWeight() &&
+            		cart[j].getPrice() == newproduct.getPrice()){
                 // ถ้ามีแล้ว -> เพิ่มจำนวน
                 cart[j].addAmount();
                 return;
@@ -34,3 +35,4 @@ public class InventoryCart {
 		return item;				//เอาสินค้าออกหมด ตัดถึงชิ้นสุดท้าย
 	}
 }
+
